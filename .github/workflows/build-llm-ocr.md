@@ -11,6 +11,15 @@ permissions:
 
 safe-outputs:
   create-pull-request:
+    allowed-files:
+      - README.md
+      - requirements.txt
+      - .env.example
+      - .gitignore
+      - src/**
+      - tests/**
+      - samples/**
+      - outputs/**
   add-comment:
   create-issue:
 
