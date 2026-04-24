@@ -1,0 +1,5 @@
+[2026-04-24T02:02:44Z] [DEBUG] [backend] GetOrLaunch called for server: safeoutputs
+[2026-04-24T02:02:44Z] [INFO] [backend] Configuring HTTP MCP backend: safeoutputs, url=http://host.docker.internal:3001
+[2026-04-24T02:02:44Z] [INFO] [backend] Successfully configured HTTP MCP backend: safeoutputs
+[2026-04-24T02:02:44Z] [INFO] [backend] Backend server info: name=safeoutputs, version=1.0.0
+[2026-04-24T02:02:44Z] [INFO] [backend] Successfully registered tools from safeoutputs (took 237.653154ms)

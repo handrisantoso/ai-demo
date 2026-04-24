@@ -1,0 +1,83 @@
+﻿2026-04-24T02:02:32.4128970Z ##[group]Run bash "${RUNNER_TEMP}/gh-aw/actions/install_copilot_cli.sh" 1.0.21
+2026-04-24T02:02:32.4129469Z [36;1mbash "${RUNNER_TEMP}/gh-aw/actions/install_copilot_cli.sh" 1.0.21[0m
+2026-04-24T02:02:32.4149201Z shell: /usr/bin/bash -e {0}
+2026-04-24T02:02:32.4149422Z env:
+2026-04-24T02:02:32.4149602Z   DEFAULT_BRANCH: master
+2026-04-24T02:02:32.4149824Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-04-24T02:02:32.4150062Z   GH_AW_ASSETS_BRANCH: 
+2026-04-24T02:02:32.4150273Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-04-24T02:02:32.4150537Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-04-24T02:02:32.4150843Z   GH_AW_WORKFLOW_ID_SANITIZED: buildllmocr
+2026-04-24T02:02:32.4154821Z   GH_AW_MODEL_MULTIPLIERS: {
+  "version": "1",
+  "description": "Effective Tokens (ET) computation data per the gh-aw Effective Tokens Specification v0.2.0. Token class weights are applied first to normalize across token classes, then the per-model multiplier scales the result relative to the reference model.",
+  "reference_model": "claude-sonnet-4.5",
+  "token_class_weights": {
+    "input": 1.0,
+    "cached_input": 0.1,
+    "output": 4.0,
+    "reasoning": 4.0,
+    "cache_write": 1.0
+  },
+  "multipliers": {
+    "claude-haiku-4.5": 0.1,
+    "claude-3-5-haiku": 0.1,
+    "claude-3-haiku": 0.1,
+    "claude-sonnet-4.5": 1.0,
+    "claude-sonnet-4.6": 1.0,
+    "claude-3-5-sonnet": 1.0,
+    "claude-3-7-sonnet": 1.0,
+    "claude-3-sonnet": 1.0,
+    "claude-opus-4.5": 5.0,
+    "claude-opus-4.6": 5.0,
+    "claude-3-5-opus": 5.0,
+    "claude-3-opus": 5.0,
+    "gpt-4o": 1.0,
+    "gpt-4o-mini": 0.1,
+    "gpt-4.1": 1.0,
+    "gpt-4.1-2025-04-14": 1.0,
+    "gpt-41-copilot": 1.0,
+    "gpt-4.1-mini": 0.1,
+    "gpt-4.1-nano": 0.05,
+    "gpt-4-turbo": 1.0,
+    "gpt-4": 1.0,
+    "gpt-5": 1.0,
+    "gpt-5-mini": 0,
+    "gpt-5.1": 1.0,
+    "gpt-5.1-codex": 1.0,
+    "gpt-5.1-codex-mini": 0.33,
+    "gpt-5.1-codex-max": 1.0,
+    "gpt-5.2": 1.0,
+    "gpt-5.2-codex": 1.0,
+    "gpt-5.3-codex": 1.0,
+    "gpt-5.4": 1.0,
+    "gpt-5.4-mini": 0.33,
+    "o1": 3.0,
+    "o1-mini": 0.5,
+    "o1-pro": 10.0,
+    "o3": 3.0,
+    "o3-mini": 0.5,
+    "o4-mini": 0.5,
+    "gemini-2.5-pro": 1.0,
+    "gemini-2.5-flash": 0.2,
+    "gemini-2.0-flash": 0.1,
+    "gemini-1.5-pro": 1.0,
+    "gemini-1.5-flash": 0.1
+  }
+}
+2026-04-24T02:02:32.4159325Z   GITHUB_AW_OTEL_TRACE_ID: c026c7155c91cf4ca046ed572da2352b
+2026-04-24T02:02:32.4159674Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: a1067ba8268b68d4
+2026-04-24T02:02:32.4159968Z   GITHUB_AW_OTEL_JOB_START_MS: 1776996151660
+2026-04-24T02:02:32.4160221Z   GH_HOST: github.com
+2026-04-24T02:02:32.4160418Z ##[endgroup]
+2026-04-24T02:02:32.4213258Z Ensuring correct ownership of /home/runner/.copilot...
+2026-04-24T02:02:32.4335422Z Installing GitHub Copilot CLI version v1.0.21 (os: Linux, arch: x86_64)...
+2026-04-24T02:02:32.4349301Z Downloading checksums from https://github.com/github/copilot-cli/releases/download/v1.0.21/SHA256SUMS.txt...
+2026-04-24T02:02:32.6042221Z Downloading binary from https://github.com/github/copilot-cli/releases/download/v1.0.21/copilot-linux-x64.tar.gz...
+2026-04-24T02:02:33.0592201Z Verifying SHA256 checksum for copilot-linux-x64.tar.gz...
+2026-04-24T02:02:33.1310563Z ✓ Checksum verification passed for copilot-linux-x64.tar.gz
+2026-04-24T02:02:33.1311152Z Installing binary to /usr/local/bin...
+2026-04-24T02:02:34.1271512Z Verifying Copilot CLI installation...
+2026-04-24T02:02:35.5963632Z GitHub Copilot CLI 1.0.21.
+2026-04-24T02:02:35.5964480Z Run 'copilot update' to check for updates.
+2026-04-24T02:02:35.6224894Z ✓ Copilot CLI installation complete

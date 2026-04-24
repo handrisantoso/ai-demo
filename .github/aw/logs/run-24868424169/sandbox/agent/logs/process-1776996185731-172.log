@@ -1,0 +1,111 @@
+2026-04-24T02:03:05.732Z [INFO] Proxy configuration: HTTP_PROXY=http://172.30.0.10:3128, HTTPS_PROXY=http://172.30.0.10:3128, NO_PROXY=localhost,127.0.0.1,::1,0.0.0.0,172.30.0.10,172.30.0.20,host.docker.internal,172.30.0.1,172.30.0.30
+2026-04-24T02:03:05.732Z [DEBUG] Sending telemetry event: copilot-cli/extension.activate
+2026-04-24T02:03:05.733Z [DEBUG] OpenTelemetry not enabled (resolveOtelConfig returned null)
+2026-04-24T02:03:05.759Z [DEBUG] No auth info or provider available, skipping custom agents load
+2026-04-24T02:03:05.772Z [INFO] Workspace initialized: 0d6c3780-c8a1-4b2c-a9cc-eadc40c3a60d (checkpoints: 0)
+2026-04-24T02:03:05.776Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry (kind: session_start)
+2026-04-24T02:03:05.777Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry (kind: memory_usage)
+2026-04-24T02:03:05.777Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry (kind: first_launch)
+2026-04-24T02:03:05.777Z [INFO] Starting Copilot CLI: 1.0.21
+2026-04-24T02:03:05.777Z [INFO] Node.js version: v24.11.1
+2026-04-24T02:03:05.778Z [DEBUG] [remoteHosts] Starting remote host detection for cwd=/home/runner/work/ai-demo/ai-demo, featureFlagEnabled=false
+2026-04-24T02:03:05.778Z [DEBUG] [remoteHosts] Feature flag ADO_DETECTION is disabled, skipping detection
+2026-04-24T02:03:05.781Z [DEBUG] Using COPILOT_API_URL from environment: http://172.30.0.30:10002
+2026-04-24T02:03:06.297Z [DEBUG] Loaded workspace MCP config from /home/runner/work/ai-demo/ai-demo/.vscode/mcp.json
+2026-04-24T02:03:06.297Z [DEBUG] Loaded MCP config from /home/runner/work/ai-demo/ai-demo/.vscode/mcp.json (project): 1 server(s): github-agentic-workflows
+2026-04-24T02:03:06.298Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry (kind: mcp_policy_check)
+2026-04-24T02:03:06.303Z [ERROR] Starting remote MCP client for github with url: http://host.docker.internal:80/mcp/github
+2026-04-24T02:03:06.303Z [ERROR] Creating MCP client for github...
+2026-04-24T02:03:06.304Z [ERROR] Connecting MCP client for github...
+2026-04-24T02:03:06.304Z [ERROR] Starting remote MCP client for safeoutputs with url: http://host.docker.internal:80/mcp/safeoutputs
+2026-04-24T02:03:06.304Z [ERROR] Creating MCP client for safeoutputs...
+2026-04-24T02:03:06.304Z [ERROR] Connecting MCP client for safeoutputs...
+2026-04-24T02:03:06.306Z [ERROR] Starting MCP client for github-agentic-workflows with 
+command: gh 
+args: aw mcp-server 
+cwd: /home/runner/work/ai-demo/ai-demo
+2026-04-24T02:03:06.306Z [ERROR] Starting MCP client for github-agentic-workflows with command: gh and args: aw mcp-server
+2026-04-24T02:03:06.307Z [ERROR] Creating MCP client for github-agentic-workflows...
+2026-04-24T02:03:06.308Z [ERROR] Connecting MCP client for github-agentic-workflows...
+2026-04-24T02:03:06.399Z [ERROR] MCP client for safeoutputs connected, took 95ms
+2026-04-24T02:03:06.400Z [ERROR] Started MCP client for remote server safeoutputs
+2026-04-24T02:03:06.403Z [ERROR] MCP client for github connected, took 99ms
+2026-04-24T02:03:06.403Z [ERROR] Started MCP client for remote server github
+2026-04-24T02:03:07.116Z [ERROR] [mcp server github-agentic-workflows stderr] unknown command "aw" for "gh"
+
+Did you mean this?
+	api
+	co
+	pr
+
+Usage:  gh <command> <subcommand> [flags]
+
+Available commands:
+  agent-task
+  alias
+  api
+  attestation
+  auth
+  browse
+  cache
+  co
+  codespace
+  completion
+  config
+  copilot
+  extension
+  gist
+  gpg-key
+  issue
+  label
+
+2026-04-24T02:03:07.117Z [ERROR] [mcp server github-agentic-workflows stderr]   licenses
+  org
+  pr
+  preview
+  project
+  release
+  repo
+  ruleset
+  run
+  search
+  secret
+  ssh-key
+  status
+  variable
+  workflow
+
+
+2026-04-24T02:03:07.119Z [ERROR] MCP transport for github-agentic-workflows closed
+2026-04-24T02:03:07.119Z [ERROR] Failed to start MCP client for github-agentic-workflows: McpError: MCP error -32000: Connection closed
+2026-04-24T02:03:07.120Z [ERROR] Recorded failure for server github-agentic-workflows: MCP error -32000: Connection closed
+2026-04-24T02:03:07.120Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry (kind: mcp_allowlist_policy_check)
+2026-04-24T02:03:07.120Z [DEBUG] Using COPILOT_API_URL from environment: http://172.30.0.30:10002
+2026-04-24T02:03:07.121Z [DEBUG] GitHub MCP server is disabled, registering config for later use
+2026-04-24T02:03:07.121Z [DEBUG] Using COPILOT_API_URL from environment: http://172.30.0.30:10002
+2026-04-24T02:03:07.121Z [DEBUG] Creating copilot-client for integration ID copilot-developer-cli with token authentication. User-agent: copilot/1.0.21 (linux v24.11.1) term/unknown
+2026-04-24T02:03:07.155Z [ERROR] Error loading models: Error: 401 "checking third-party user token: unauthorized: Personal Access Token does not have \"Copilot Requests\" permission\n"
+2026-04-24T02:03:07.156Z [DEBUG] runPromptMode: executePromptDirectly returned succeeded=false
+2026-04-24T02:03:07.156Z [DEBUG] runPromptMode: exiting with code 1
+2026-04-24T02:03:07.156Z [DEBUG] [shutdown] Starting shutdown with 7 disposables
+2026-04-24T02:03:07.156Z [DEBUG] [shutdown] Starting dispose: Session.abort+shutdown
+2026-04-24T02:03:07.157Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry (kind: session_shutdown)
+2026-04-24T02:03:07.157Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry (kind: memory_usage)
+2026-04-24T02:03:07.157Z [DEBUG] [shutdown] Completed dispose: Session.abort+shutdown (1ms)
+2026-04-24T02:03:07.158Z [DEBUG] [shutdown] Starting dispose: closeAllDatabases
+2026-04-24T02:03:07.158Z [DEBUG] [shutdown] Starting dispose: closeSessionStore
+2026-04-24T02:03:07.158Z [DEBUG] [shutdown] Starting dispose: seaInUseLockCleanup
+2026-04-24T02:03:07.158Z [DEBUG] [shutdown] Starting dispose: LSPClientFactory.shutdownAll
+2026-04-24T02:03:07.158Z [DEBUG] [shutdown] Starting dispose: kwe
+2026-04-24T02:03:07.158Z [DEBUG] [shutdown] Starting dispose: autoUpdate
+2026-04-24T02:03:07.158Z [DEBUG] [shutdown] Starting dispose: lP
+2026-04-24T02:03:07.158Z [DEBUG] [shutdown] Completed dispose: closeSessionStore (0ms)
+2026-04-24T02:03:07.158Z [DEBUG] [shutdown] Completed dispose: autoUpdate (0ms)
+2026-04-24T02:03:07.158Z [DEBUG] [shutdown] Completed dispose: closeAllDatabases (1ms)
+2026-04-24T02:03:07.159Z [DEBUG] [shutdown] Completed dispose: LSPClientFactory.shutdownAll (0ms)
+2026-04-24T02:03:07.159Z [DEBUG] [shutdown] Completed dispose: kwe (1ms)
+2026-04-24T02:03:07.159Z [DEBUG] [shutdown] Completed dispose: lP (1ms)
+2026-04-24T02:03:07.159Z [DEBUG] [shutdown] Completed dispose: seaInUseLockCleanup (1ms)
+2026-04-24T02:03:07.160Z [DEBUG] [shutdown] Starting dispose: logger
+2026-04-24T02:03:07.160Z [DEBUG] [shutdown] Completed dispose: logger (1ms)
+2026-04-24T02:03:07.160Z [DEBUG] [shutdown] Shutdown complete

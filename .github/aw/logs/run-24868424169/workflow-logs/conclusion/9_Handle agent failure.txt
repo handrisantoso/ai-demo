@@ -1,0 +1,122 @@
+﻿2026-04-24T02:03:28.6084904Z ##[group]Run actions/github-script@373c709c69115d41ff229c7e5df9f8788daa9553
+2026-04-24T02:03:28.6085638Z with:
+2026-04-24T02:03:28.6086221Z   github-token: ***
+2026-04-24T02:03:28.6088272Z   script: const { setupGlobals } = require('/home/runner/work/_temp/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require('/home/runner/work/_temp/gh-aw/actions/handle_agent_failure.cjs');
+await main();
+
+2026-04-24T02:03:28.6090725Z   debug: false
+2026-04-24T02:03:28.6091135Z   user-agent: actions/github-script
+2026-04-24T02:03:28.6091626Z   result-encoding: json
+2026-04-24T02:03:28.6092043Z   retries: 0
+2026-04-24T02:03:28.6092464Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-04-24T02:03:28.6092989Z env:
+2026-04-24T02:03:28.6100058Z   GH_AW_MODEL_MULTIPLIERS: {
+  "version": "1",
+  "description": "Effective Tokens (ET) computation data per the gh-aw Effective Tokens Specification v0.2.0. Token class weights are applied first to normalize across token classes, then the per-model multiplier scales the result relative to the reference model.",
+  "reference_model": "claude-sonnet-4.5",
+  "token_class_weights": {
+    "input": 1.0,
+    "cached_input": 0.1,
+    "output": 4.0,
+    "reasoning": 4.0,
+    "cache_write": 1.0
+  },
+  "multipliers": {
+    "claude-haiku-4.5": 0.1,
+    "claude-3-5-haiku": 0.1,
+    "claude-3-haiku": 0.1,
+    "claude-sonnet-4.5": 1.0,
+    "claude-sonnet-4.6": 1.0,
+    "claude-3-5-sonnet": 1.0,
+    "claude-3-7-sonnet": 1.0,
+    "claude-3-sonnet": 1.0,
+    "claude-opus-4.5": 5.0,
+    "claude-opus-4.6": 5.0,
+    "claude-3-5-opus": 5.0,
+    "claude-3-opus": 5.0,
+    "gpt-4o": 1.0,
+    "gpt-4o-mini": 0.1,
+    "gpt-4.1": 1.0,
+    "gpt-4.1-2025-04-14": 1.0,
+    "gpt-41-copilot": 1.0,
+    "gpt-4.1-mini": 0.1,
+    "gpt-4.1-nano": 0.05,
+    "gpt-4-turbo": 1.0,
+    "gpt-4": 1.0,
+    "gpt-5": 1.0,
+    "gpt-5-mini": 0,
+    "gpt-5.1": 1.0,
+    "gpt-5.1-codex": 1.0,
+    "gpt-5.1-codex-mini": 0.33,
+    "gpt-5.1-codex-max": 1.0,
+    "gpt-5.2": 1.0,
+    "gpt-5.2-codex": 1.0,
+    "gpt-5.3-codex": 1.0,
+    "gpt-5.4": 1.0,
+    "gpt-5.4-mini": 0.33,
+    "o1": 3.0,
+    "o1-mini": 0.5,
+    "o1-pro": 10.0,
+    "o3": 3.0,
+    "o3-mini": 0.5,
+    "o4-mini": 0.5,
+    "gemini-2.5-pro": 1.0,
+    "gemini-2.5-flash": 0.2,
+    "gemini-2.0-flash": 0.1,
+    "gemini-1.5-pro": 1.0,
+    "gemini-1.5-flash": 0.1
+  }
+}
+2026-04-24T02:03:28.6108167Z   GITHUB_AW_OTEL_TRACE_ID: c026c7155c91cf4ca046ed572da2352b
+2026-04-24T02:03:28.6108813Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 4fef7deb13577c77
+2026-04-24T02:03:28.6109388Z   GITHUB_AW_OTEL_JOB_START_MS: 1776996207449
+2026-04-24T02:03:28.6109956Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+2026-04-24T02:03:28.6110542Z   GH_AW_WORKFLOW_NAME: Build LLM OCR From Image
+2026-04-24T02:03:28.6111290Z   GH_AW_RUN_URL: https://github.com/handrisantoso/ai-demo/actions/runs/24868424169
+2026-04-24T02:03:28.6112032Z   GH_AW_AGENT_CONCLUSION: failure
+2026-04-24T02:03:28.6112521Z   GH_AW_WORKFLOW_ID: build-llm-ocr
+2026-04-24T02:03:28.6112994Z   GH_AW_ENGINE_ID: copilot
+2026-04-24T02:03:28.6113465Z   GH_AW_SECRET_VERIFICATION_RESULT: success
+2026-04-24T02:03:28.6113987Z   GH_AW_CHECKOUT_PR_SUCCESS: true
+2026-04-24T02:03:28.6114478Z   GH_AW_INFERENCE_ACCESS_ERROR: false
+2026-04-24T02:03:28.6114970Z   GH_AW_MCP_POLICY_ERROR: false
+2026-04-24T02:03:28.6115444Z   GH_AW_AGENTIC_ENGINE_TIMEOUT: false
+2026-04-24T02:03:28.6115955Z   GH_AW_MODEL_NOT_SUPPORTED_ERROR: false
+2026-04-24T02:03:28.6116464Z   GH_AW_CODE_PUSH_FAILURE_ERRORS: 
+2026-04-24T02:03:28.6117182Z   GH_AW_CODE_PUSH_FAILURE_COUNT: 
+2026-04-24T02:03:28.6117665Z   GH_AW_LOCKDOWN_CHECK_FAILED: false
+2026-04-24T02:03:28.6118151Z   GH_AW_STALE_LOCK_FILE_FAILED: false
+2026-04-24T02:03:28.6118640Z   GH_AW_GROUP_REPORTS: false
+2026-04-24T02:03:28.6119103Z   GH_AW_FAILURE_REPORT_AS_ISSUE: true
+2026-04-24T02:03:28.6119584Z   GH_AW_TIMEOUT_MINUTES: 20
+2026-04-24T02:03:28.6120007Z ##[endgroup]
+2026-04-24T02:03:28.7321853Z Agent conclusion: failure
+2026-04-24T02:03:28.7326477Z Workflow name: Build LLM OCR From Image
+2026-04-24T02:03:28.7330132Z Workflow ID: build-llm-ocr
+2026-04-24T02:03:28.7332819Z Secret verification result: success
+2026-04-24T02:03:28.7335491Z Assignment error count: 0
+2026-04-24T02:03:28.7338502Z Assign copilot failure count: 0
+2026-04-24T02:03:28.7341125Z Create discussion error count: 0
+2026-04-24T02:03:28.7343708Z Code push failure count: 0
+2026-04-24T02:03:28.7440843Z Checkout PR success: true
+2026-04-24T02:03:28.7445733Z Inference access error: false
+2026-04-24T02:03:28.7449159Z MCP policy error: false
+2026-04-24T02:03:28.7451924Z Agentic engine timeout: false
+2026-04-24T02:03:28.7456422Z Model not supported error: false
+2026-04-24T02:03:28.7459250Z Push repo-memory result: 
+2026-04-24T02:03:28.7460910Z App token minting failed (safe_outputs/conclusion/activation): false/false/false
+2026-04-24T02:03:28.7462672Z Lockdown check failed: false
+2026-04-24T02:03:28.7463888Z Stale lock file check failed: false
+2026-04-24T02:03:28.7469533Z Agent output content length: 13
+2026-04-24T02:03:28.7788134Z Searching for pull request from branch: master
+2026-04-24T02:03:29.0407847Z No pull request found for branch: master
+2026-04-24T02:03:29.0408832Z Parent issue creation is disabled (group-reports: false)
+2026-04-24T02:03:29.0437234Z Checking for existing issue with title: "[aw] Build LLM OCR From Image failed"
+2026-04-24T02:03:29.6573686Z [@octokit/request] "POST https://api.github.com/repos/handrisantoso/ai-demo/issues" is deprecated. It is scheduled to be removed on Fri, 10 Mar 2028 00:00:00 GMT. See https://docs.github.com/en/rest/about-the-rest-api/api-versions
+2026-04-24T02:03:29.6575310Z No existing issue found, creating a new one
+2026-04-24T02:03:29.6575842Z Agent output content length: 13
+2026-04-24T02:03:29.6576311Z Agent output content length: 13
+2026-04-24T02:03:29.6577174Z Found 2 engine error message(s) in agent-stdio.log
+2026-04-24T02:03:29.6650680Z ✓ Created new issue #1: https://github.com/handrisantoso/ai-demo/issues/1

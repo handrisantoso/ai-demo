@@ -1,0 +1,132 @@
+﻿2026-04-24T02:02:18.2372399Z ##[group]Run actions/github-script@373c709c69115d41ff229c7e5df9f8788daa9553
+2026-04-24T02:02:18.2373145Z with:
+2026-04-24T02:02:18.2374761Z   script: const { setupGlobals } = require('/home/runner/work/_temp/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require('/home/runner/work/_temp/gh-aw/actions/generate_aw_info.cjs');
+await main(core, context);
+
+2026-04-24T02:02:18.2376731Z   github-token: ***
+2026-04-24T02:02:18.2377122Z   debug: false
+2026-04-24T02:02:18.2377519Z   user-agent: actions/github-script
+2026-04-24T02:02:18.2378005Z   result-encoding: json
+2026-04-24T02:02:18.2378399Z   retries: 0
+2026-04-24T02:02:18.2378817Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-04-24T02:02:18.2379562Z env:
+2026-04-24T02:02:18.2386548Z   GH_AW_MODEL_MULTIPLIERS: {
+  "version": "1",
+  "description": "Effective Tokens (ET) computation data per the gh-aw Effective Tokens Specification v0.2.0. Token class weights are applied first to normalize across token classes, then the per-model multiplier scales the result relative to the reference model.",
+  "reference_model": "claude-sonnet-4.5",
+  "token_class_weights": {
+    "input": 1.0,
+    "cached_input": 0.1,
+    "output": 4.0,
+    "reasoning": 4.0,
+    "cache_write": 1.0
+  },
+  "multipliers": {
+    "claude-haiku-4.5": 0.1,
+    "claude-3-5-haiku": 0.1,
+    "claude-3-haiku": 0.1,
+    "claude-sonnet-4.5": 1.0,
+    "claude-sonnet-4.6": 1.0,
+    "claude-3-5-sonnet": 1.0,
+    "claude-3-7-sonnet": 1.0,
+    "claude-3-sonnet": 1.0,
+    "claude-opus-4.5": 5.0,
+    "claude-opus-4.6": 5.0,
+    "claude-3-5-opus": 5.0,
+    "claude-3-opus": 5.0,
+    "gpt-4o": 1.0,
+    "gpt-4o-mini": 0.1,
+    "gpt-4.1": 1.0,
+    "gpt-4.1-2025-04-14": 1.0,
+    "gpt-41-copilot": 1.0,
+    "gpt-4.1-mini": 0.1,
+    "gpt-4.1-nano": 0.05,
+    "gpt-4-turbo": 1.0,
+    "gpt-4": 1.0,
+    "gpt-5": 1.0,
+    "gpt-5-mini": 0,
+    "gpt-5.1": 1.0,
+    "gpt-5.1-codex": 1.0,
+    "gpt-5.1-codex-mini": 0.33,
+    "gpt-5.1-codex-max": 1.0,
+    "gpt-5.2": 1.0,
+    "gpt-5.2-codex": 1.0,
+    "gpt-5.3-codex": 1.0,
+    "gpt-5.4": 1.0,
+    "gpt-5.4-mini": 0.33,
+    "o1": 3.0,
+    "o1-mini": 0.5,
+    "o1-pro": 10.0,
+    "o3": 3.0,
+    "o3-mini": 0.5,
+    "o4-mini": 0.5,
+    "gemini-2.5-pro": 1.0,
+    "gemini-2.5-flash": 0.2,
+    "gemini-2.0-flash": 0.1,
+    "gemini-1.5-pro": 1.0,
+    "gemini-1.5-flash": 0.1
+  }
+}
+2026-04-24T02:02:18.2394303Z   GITHUB_AW_OTEL_TRACE_ID: c026c7155c91cf4ca046ed572da2352b
+2026-04-24T02:02:18.2394952Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 0ed06ba210ce19d4
+2026-04-24T02:02:18.2395513Z   GITHUB_AW_OTEL_JOB_START_MS: 1776996138211
+2026-04-24T02:02:18.2396029Z   GH_AW_INFO_ENGINE_ID: copilot
+2026-04-24T02:02:18.2396511Z   GH_AW_INFO_ENGINE_NAME: GitHub Copilot CLI
+2026-04-24T02:02:18.2397016Z   GH_AW_INFO_MODEL: auto
+2026-04-24T02:02:18.2397445Z   GH_AW_INFO_VERSION: 1.0.21
+2026-04-24T02:02:18.2397901Z   GH_AW_INFO_AGENT_VERSION: 1.0.21
+2026-04-24T02:02:18.2398368Z   GH_AW_INFO_CLI_VERSION: v0.68.3
+2026-04-24T02:02:18.2398887Z   GH_AW_INFO_WORKFLOW_NAME: Build LLM OCR From Image
+2026-04-24T02:02:18.2399455Z   GH_AW_INFO_EXPERIMENTAL: false
+2026-04-24T02:02:18.2399947Z   GH_AW_INFO_SUPPORTS_TOOLS_ALLOWLIST: true
+2026-04-24T02:02:18.2400662Z   GH_AW_INFO_STAGED: false
+2026-04-24T02:02:18.2401270Z   GH_AW_INFO_ALLOWED_DOMAINS: ["defaults"]
+2026-04-24T02:02:18.2401789Z   GH_AW_INFO_FIREWALL_ENABLED: true
+2026-04-24T02:02:18.2402264Z   GH_AW_INFO_AWF_VERSION: v0.25.20
+2026-04-24T02:02:18.2402721Z   GH_AW_INFO_AWMG_VERSION: 
+2026-04-24T02:02:18.2403162Z   GH_AW_INFO_FIREWALL_TYPE: squid
+2026-04-24T02:02:18.2403623Z   GH_AW_COMPILED_STRICT: true
+2026-04-24T02:02:18.2404054Z ##[endgroup]
+2026-04-24T02:02:18.4067262Z Starting context variable validation...
+2026-04-24T02:02:18.4353565Z ✓ github.event.repository.id is valid: 1219533217
+2026-04-24T02:02:18.4354992Z ✓ github.event.sender.id is valid: 115534930
+2026-04-24T02:02:18.4355841Z Validated 2 context variables
+2026-04-24T02:02:18.4356541Z ✅ All context variables validated successfully
+2026-04-24T02:02:18.4357885Z Lockdown mode not explicitly enabled, skipping validation
+2026-04-24T02:02:18.4358639Z Repository visibility: unknown
+2026-04-24T02:02:18.4359252Z Compiled with strict mode: true
+2026-04-24T02:02:18.4359897Z Generated aw_info.json at: /tmp/gh-aw/aw_info.json
+2026-04-24T02:02:18.4361274Z {
+2026-04-24T02:02:18.4361759Z   "engine_id": "copilot",
+2026-04-24T02:02:18.4363198Z   "engine_name": "GitHub Copilot CLI",
+2026-04-24T02:02:18.4363743Z   "model": "auto",
+2026-04-24T02:02:18.4364137Z   "version": "1.0.21",
+2026-04-24T02:02:18.4364561Z   "agent_version": "1.0.21",
+2026-04-24T02:02:18.4365052Z   "workflow_name": "Build LLM OCR From Image",
+2026-04-24T02:02:18.4365628Z   "experimental": false,
+2026-04-24T02:02:18.4366081Z   "supports_tools_allowlist": true,
+2026-04-24T02:02:18.4366770Z   "run_id": 24868424169,
+2026-04-24T02:02:18.4367184Z   "run_number": 1,
+2026-04-24T02:02:18.4367575Z   "run_attempt": "1",
+2026-04-24T02:02:18.4368005Z   "repository": "handrisantoso/ai-demo",
+2026-04-24T02:02:18.4368527Z   "ref": "refs/heads/master",
+2026-04-24T02:02:18.4369039Z   "sha": "240b80599aa84951aae00c0ae95eabc83f06985a",
+2026-04-24T02:02:18.4369593Z   "actor": "handrisantoso",
+2026-04-24T02:02:18.4370059Z   "event_name": "workflow_dispatch",
+2026-04-24T02:02:18.4371984Z   "target_repo": "",
+2026-04-24T02:02:18.4372413Z   "staged": false,
+2026-04-24T02:02:18.4372802Z   "allowed_domains": [
+2026-04-24T02:02:18.4373199Z     "defaults"
+2026-04-24T02:02:18.4373548Z   ],
+2026-04-24T02:02:18.4373902Z   "firewall_enabled": true,
+2026-04-24T02:02:18.4374353Z   "awf_version": "v0.25.20",
+2026-04-24T02:02:18.4374787Z   "awmg_version": "",
+2026-04-24T02:02:18.4375182Z   "steps": {
+2026-04-24T02:02:18.4375543Z     "firewall": "squid"
+2026-04-24T02:02:18.4375942Z   },
+2026-04-24T02:02:18.4376303Z   "created_at": "2026-04-24T02:02:18.407Z",
+2026-04-24T02:02:18.4376815Z   "cli_version": "v0.68.3"
+2026-04-24T02:02:18.4377235Z }
+2026-04-24T02:02:18.4377622Z Generated workflow overview in step summary

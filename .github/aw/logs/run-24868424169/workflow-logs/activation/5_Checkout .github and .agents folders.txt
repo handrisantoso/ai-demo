@@ -1,0 +1,176 @@
+﻿2026-04-24T02:02:18.4669891Z ##[group]Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+2026-04-24T02:02:18.4671098Z with:
+2026-04-24T02:02:18.4671486Z   persist-credentials: false
+2026-04-24T02:02:18.4671956Z   sparse-checkout: .github
+.agents
+
+2026-04-24T02:02:18.4672460Z   sparse-checkout-cone-mode: true
+2026-04-24T02:02:18.4672916Z   fetch-depth: 1
+2026-04-24T02:02:18.4673313Z   repository: handrisantoso/ai-demo
+2026-04-24T02:02:18.4674472Z   token: ***
+2026-04-24T02:02:18.4674860Z   ssh-strict: true
+2026-04-24T02:02:18.4675238Z   ssh-user: git
+2026-04-24T02:02:18.4675668Z   clean: true
+2026-04-24T02:02:18.4676027Z   fetch-tags: false
+2026-04-24T02:02:18.4676419Z   show-progress: true
+2026-04-24T02:02:18.4676809Z   lfs: false
+2026-04-24T02:02:18.4677159Z   submodules: false
+2026-04-24T02:02:18.4677552Z   set-safe-directory: true
+2026-04-24T02:02:18.4677957Z env:
+2026-04-24T02:02:18.4684905Z   GH_AW_MODEL_MULTIPLIERS: {
+  "version": "1",
+  "description": "Effective Tokens (ET) computation data per the gh-aw Effective Tokens Specification v0.2.0. Token class weights are applied first to normalize across token classes, then the per-model multiplier scales the result relative to the reference model.",
+  "reference_model": "claude-sonnet-4.5",
+  "token_class_weights": {
+    "input": 1.0,
+    "cached_input": 0.1,
+    "output": 4.0,
+    "reasoning": 4.0,
+    "cache_write": 1.0
+  },
+  "multipliers": {
+    "claude-haiku-4.5": 0.1,
+    "claude-3-5-haiku": 0.1,
+    "claude-3-haiku": 0.1,
+    "claude-sonnet-4.5": 1.0,
+    "claude-sonnet-4.6": 1.0,
+    "claude-3-5-sonnet": 1.0,
+    "claude-3-7-sonnet": 1.0,
+    "claude-3-sonnet": 1.0,
+    "claude-opus-4.5": 5.0,
+    "claude-opus-4.6": 5.0,
+    "claude-3-5-opus": 5.0,
+    "claude-3-opus": 5.0,
+    "gpt-4o": 1.0,
+    "gpt-4o-mini": 0.1,
+    "gpt-4.1": 1.0,
+    "gpt-4.1-2025-04-14": 1.0,
+    "gpt-41-copilot": 1.0,
+    "gpt-4.1-mini": 0.1,
+    "gpt-4.1-nano": 0.05,
+    "gpt-4-turbo": 1.0,
+    "gpt-4": 1.0,
+    "gpt-5": 1.0,
+    "gpt-5-mini": 0,
+    "gpt-5.1": 1.0,
+    "gpt-5.1-codex": 1.0,
+    "gpt-5.1-codex-mini": 0.33,
+    "gpt-5.1-codex-max": 1.0,
+    "gpt-5.2": 1.0,
+    "gpt-5.2-codex": 1.0,
+    "gpt-5.3-codex": 1.0,
+    "gpt-5.4": 1.0,
+    "gpt-5.4-mini": 0.33,
+    "o1": 3.0,
+    "o1-mini": 0.5,
+    "o1-pro": 10.0,
+    "o3": 3.0,
+    "o3-mini": 0.5,
+    "o4-mini": 0.5,
+    "gemini-2.5-pro": 1.0,
+    "gemini-2.5-flash": 0.2,
+    "gemini-2.0-flash": 0.1,
+    "gemini-1.5-pro": 1.0,
+    "gemini-1.5-flash": 0.1
+  }
+}
+2026-04-24T02:02:18.4692781Z   GITHUB_AW_OTEL_TRACE_ID: c026c7155c91cf4ca046ed572da2352b
+2026-04-24T02:02:18.4693421Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 0ed06ba210ce19d4
+2026-04-24T02:02:18.4693996Z   GITHUB_AW_OTEL_JOB_START_MS: 1776996138211
+2026-04-24T02:02:18.4694484Z ##[endgroup]
+2026-04-24T02:02:19.0908459Z Syncing repository: handrisantoso/ai-demo
+2026-04-24T02:02:19.0930534Z ##[group]Getting Git version info
+2026-04-24T02:02:19.0931855Z Working directory is '/home/runner/work/ai-demo/ai-demo'
+2026-04-24T02:02:19.0932797Z [command]/usr/bin/git version
+2026-04-24T02:02:19.0933286Z git version 2.53.0
+2026-04-24T02:02:19.0934748Z ##[endgroup]
+2026-04-24T02:02:19.0938807Z Temporarily overriding HOME='/home/runner/work/_temp/dd5cfa00-4ffe-4ee7-80f4-7bceadd61bde' before making global git config changes
+2026-04-24T02:02:19.0946494Z Adding repository directory to the temporary git global config as a safe directory
+2026-04-24T02:02:19.0947773Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ai-demo/ai-demo
+2026-04-24T02:02:19.0949261Z Deleting the contents of '/home/runner/work/ai-demo/ai-demo'
+2026-04-24T02:02:19.0950655Z ##[group]Initializing the repository
+2026-04-24T02:02:19.0951322Z [command]/usr/bin/git init /home/runner/work/ai-demo/ai-demo
+2026-04-24T02:02:19.0952120Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-04-24T02:02:19.0952998Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-04-24T02:02:19.0953839Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-04-24T02:02:19.0954933Z hint: call:
+2026-04-24T02:02:19.0960844Z hint:
+2026-04-24T02:02:19.0961439Z hint: 	git config --global init.defaultBranch <name>
+2026-04-24T02:02:19.0962009Z hint:
+2026-04-24T02:02:19.0962537Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-04-24T02:02:19.0963400Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-04-24T02:02:19.0964071Z hint:
+2026-04-24T02:02:19.0964431Z hint: 	git branch -m <name>
+2026-04-24T02:02:19.0964851Z hint:
+2026-04-24T02:02:19.0965419Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-04-24T02:02:19.0966315Z Initialized empty Git repository in /home/runner/work/ai-demo/ai-demo/.git/
+2026-04-24T02:02:19.0967765Z [command]/usr/bin/git remote add origin https://github.com/handrisantoso/ai-demo
+2026-04-24T02:02:19.0969163Z ##[endgroup]
+2026-04-24T02:02:19.0969826Z ##[group]Disabling automatic garbage collection
+2026-04-24T02:02:19.0970716Z [command]/usr/bin/git config --local gc.auto 0
+2026-04-24T02:02:19.0971959Z ##[endgroup]
+2026-04-24T02:02:19.0972571Z ##[group]Setting up auth
+2026-04-24T02:02:19.0973020Z Removing SSH command configuration
+2026-04-24T02:02:19.0973691Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-04-24T02:02:19.0975588Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-04-24T02:02:19.0977268Z Removing HTTP extra header
+2026-04-24T02:02:19.0978030Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-04-24T02:02:19.0980469Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-04-24T02:02:19.0982568Z Removing includeIf entries pointing to credentials config files
+2026-04-24T02:02:19.0983432Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-04-24T02:02:19.0985075Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-04-24T02:02:19.0987534Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-673833ae-8652-42b8-9ecc-1cd0d19acab2.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-04-24T02:02:19.0990068Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/ai-demo/ai-demo/.git.path /home/runner/work/_temp/git-credentials-673833ae-8652-42b8-9ecc-1cd0d19acab2.config
+2026-04-24T02:02:19.0992798Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/ai-demo/ai-demo/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-673833ae-8652-42b8-9ecc-1cd0d19acab2.config
+2026-04-24T02:02:19.0995374Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-673833ae-8652-42b8-9ecc-1cd0d19acab2.config
+2026-04-24T02:02:19.0997783Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-673833ae-8652-42b8-9ecc-1cd0d19acab2.config
+2026-04-24T02:02:19.0999683Z ##[endgroup]
+2026-04-24T02:02:19.1000476Z ##[group]Fetching the repository
+2026-04-24T02:02:19.1001822Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --filter=blob:none --depth=1 origin +240b80599aa84951aae00c0ae95eabc83f06985a:refs/remotes/origin/master
+2026-04-24T02:02:19.5186345Z From https://github.com/handrisantoso/ai-demo
+2026-04-24T02:02:19.5187203Z  * [new ref]         240b80599aa84951aae00c0ae95eabc83f06985a -> origin/master
+2026-04-24T02:02:19.5188832Z [command]/usr/bin/git branch --list --remote origin/master
+2026-04-24T02:02:19.5189478Z   origin/master
+2026-04-24T02:02:19.5191140Z [command]/usr/bin/git rev-parse refs/remotes/origin/master
+2026-04-24T02:02:19.5192181Z 240b80599aa84951aae00c0ae95eabc83f06985a
+2026-04-24T02:02:19.5193454Z ##[endgroup]
+2026-04-24T02:02:19.5194080Z ##[group]Determining the checkout info
+2026-04-24T02:02:19.5194795Z ##[endgroup]
+2026-04-24T02:02:19.5195417Z ##[group]Setting up sparse checkout
+2026-04-24T02:02:19.5196004Z [command]/usr/bin/git sparse-checkout set .github .agents
+2026-04-24T02:02:19.5197337Z ##[endgroup]
+2026-04-24T02:02:19.5197942Z ##[group]Checking out the ref
+2026-04-24T02:02:19.5198661Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-04-24T02:02:19.5199472Z Reset branch 'master'
+2026-04-24T02:02:19.5199936Z branch 'master' set up to track 'origin/master'.
+2026-04-24T02:02:19.5201514Z ##[endgroup]
+2026-04-24T02:02:19.5202414Z [command]/usr/bin/git log -1 --format=%H
+2026-04-24T02:02:19.5202961Z 240b80599aa84951aae00c0ae95eabc83f06985a
+2026-04-24T02:02:19.5204233Z ##[group]Removing auth
+2026-04-24T02:02:19.5204666Z Removing SSH command configuration
+2026-04-24T02:02:19.5205421Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-04-24T02:02:19.5207485Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-04-24T02:02:19.5209399Z Removing HTTP extra header
+2026-04-24T02:02:19.5210548Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-04-24T02:02:19.5213355Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-04-24T02:02:19.5215725Z Removing includeIf entries pointing to credentials config files
+2026-04-24T02:02:19.5216631Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-04-24T02:02:19.5217544Z includeif.gitdir:/home/runner/work/ai-demo/ai-demo/.git.path
+2026-04-24T02:02:19.5218395Z includeif.gitdir:/home/runner/work/ai-demo/ai-demo/.git/worktrees/*.path
+2026-04-24T02:02:19.5219170Z includeif.gitdir:/github/workspace/.git.path
+2026-04-24T02:02:19.5219829Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-04-24T02:02:19.5221536Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/ai-demo/ai-demo/.git.path
+2026-04-24T02:02:19.5222759Z /home/runner/work/_temp/git-credentials-673833ae-8652-42b8-9ecc-1cd0d19acab2.config
+2026-04-24T02:02:19.5225067Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/ai-demo/ai-demo/.git.path /home/runner/work/_temp/git-credentials-673833ae-8652-42b8-9ecc-1cd0d19acab2.config
+2026-04-24T02:02:19.5227537Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/ai-demo/ai-demo/.git/worktrees/*.path
+2026-04-24T02:02:19.5228837Z /home/runner/work/_temp/git-credentials-673833ae-8652-42b8-9ecc-1cd0d19acab2.config
+2026-04-24T02:02:19.5231302Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/ai-demo/ai-demo/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-673833ae-8652-42b8-9ecc-1cd0d19acab2.config
+2026-04-24T02:02:19.5233685Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-04-24T02:02:19.5234750Z /github/runner_temp/git-credentials-673833ae-8652-42b8-9ecc-1cd0d19acab2.config
+2026-04-24T02:02:19.5236827Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-673833ae-8652-42b8-9ecc-1cd0d19acab2.config
+2026-04-24T02:02:19.5239068Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-04-24T02:02:19.5240436Z /github/runner_temp/git-credentials-673833ae-8652-42b8-9ecc-1cd0d19acab2.config
+2026-04-24T02:02:19.5242621Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-673833ae-8652-42b8-9ecc-1cd0d19acab2.config
+2026-04-24T02:02:19.5245334Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-04-24T02:02:19.5247382Z Removing credentials config '/home/runner/work/_temp/git-credentials-673833ae-8652-42b8-9ecc-1cd0d19acab2.config'
+2026-04-24T02:02:19.5249370Z ##[endgroup]

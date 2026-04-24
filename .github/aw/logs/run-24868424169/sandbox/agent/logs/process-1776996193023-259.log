@@ -1,0 +1,30 @@
+2026-04-24T02:03:13.024Z [INFO] Proxy configuration: HTTP_PROXY=http://172.30.0.10:3128, HTTPS_PROXY=http://172.30.0.10:3128, NO_PROXY=localhost,127.0.0.1,::1,0.0.0.0,172.30.0.10,172.30.0.20,host.docker.internal,172.30.0.1,172.30.0.30
+2026-04-24T02:03:13.086Z [DEBUG] OpenTelemetry not enabled (resolveOtelConfig returned null)
+2026-04-24T02:03:13.087Z [DEBUG] Found 0 JSONL sessions and 0 legacy sessions
+2026-04-24T02:03:13.114Z [DEBUG] No auth info or provider available, skipping custom agents load
+2026-04-24T02:03:13.127Z [INFO] Workspace initialized: bf51199e-ce53-4fd6-b654-d53ec77dbdc6 (checkpoints: 0)
+2026-04-24T02:03:13.131Z [INFO] Starting Copilot CLI: 1.0.21
+2026-04-24T02:03:13.131Z [INFO] Node.js version: v24.11.1
+2026-04-24T02:03:13.131Z [DEBUG] [remoteHosts] Starting remote host detection for cwd=/home/runner/work/ai-demo/ai-demo, featureFlagEnabled=false
+2026-04-24T02:03:13.131Z [DEBUG] [remoteHosts] Feature flag ADO_DETECTION is disabled, skipping detection
+2026-04-24T02:03:13.164Z [ERROR] No authentication information found.
+2026-04-24T02:03:13.164Z [DEBUG] [shutdown] Starting shutdown with 7 disposables
+2026-04-24T02:03:13.165Z [DEBUG] [shutdown] Starting dispose: Session.abort+shutdown
+2026-04-24T02:03:13.166Z [DEBUG] [shutdown] Completed dispose: Session.abort+shutdown (1ms)
+2026-04-24T02:03:13.166Z [DEBUG] [shutdown] Starting dispose: closeAllDatabases
+2026-04-24T02:03:13.166Z [DEBUG] [shutdown] Starting dispose: closeSessionStore
+2026-04-24T02:03:13.166Z [DEBUG] [shutdown] Starting dispose: seaInUseLockCleanup
+2026-04-24T02:03:13.166Z [DEBUG] [shutdown] Starting dispose: LSPClientFactory.shutdownAll
+2026-04-24T02:03:13.166Z [DEBUG] [shutdown] Starting dispose: kwe
+2026-04-24T02:03:13.166Z [DEBUG] [shutdown] Starting dispose: autoUpdate
+2026-04-24T02:03:13.166Z [DEBUG] [shutdown] Starting dispose: lP
+2026-04-24T02:03:13.167Z [DEBUG] [shutdown] Completed dispose: closeSessionStore (0ms)
+2026-04-24T02:03:13.167Z [DEBUG] [shutdown] Completed dispose: autoUpdate (1ms)
+2026-04-24T02:03:13.167Z [DEBUG] [shutdown] Completed dispose: closeAllDatabases (1ms)
+2026-04-24T02:03:13.167Z [DEBUG] [shutdown] Completed dispose: LSPClientFactory.shutdownAll (1ms)
+2026-04-24T02:03:13.167Z [DEBUG] [shutdown] Completed dispose: kwe (1ms)
+2026-04-24T02:03:13.168Z [DEBUG] [shutdown] Completed dispose: seaInUseLockCleanup (2ms)
+2026-04-24T02:03:13.168Z [DEBUG] [shutdown] Completed dispose: lP (2ms)
+2026-04-24T02:03:13.168Z [DEBUG] [shutdown] Starting dispose: logger
+2026-04-24T02:03:13.168Z [DEBUG] [shutdown] Completed dispose: logger (0ms)
+2026-04-24T02:03:13.168Z [DEBUG] [shutdown] Shutdown complete

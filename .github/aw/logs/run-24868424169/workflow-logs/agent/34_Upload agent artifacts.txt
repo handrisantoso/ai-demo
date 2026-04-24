@@ -1,0 +1,103 @@
+﻿2026-04-24T02:03:17.0088982Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+2026-04-24T02:03:17.0089391Z with:
+2026-04-24T02:03:17.0089583Z   name: agent
+2026-04-24T02:03:17.0090936Z   path: /tmp/gh-aw/aw-prompts/prompt.txt
+/tmp/gh-aw/sandbox/agent/logs/
+/tmp/gh-aw/redacted-urls.log
+/tmp/gh-aw/mcp-logs/
+/tmp/gh-aw/agent_usage.json
+/tmp/gh-aw/agent-stdio.log
+/tmp/gh-aw/agent/
+/tmp/gh-aw/github_rate_limits.jsonl
+/tmp/gh-aw/safeoutputs.jsonl
+/tmp/gh-aw/agent_output.json
+/tmp/gh-aw/aw-*.patch
+/tmp/gh-aw/aw-*.bundle
+/tmp/gh-aw/sandbox/firewall/logs/
+/tmp/gh-aw/sandbox/firewall/audit/
+
+2026-04-24T02:03:17.0092325Z   if-no-files-found: ignore
+2026-04-24T02:03:17.0092571Z   compression-level: 6
+2026-04-24T02:03:17.0092788Z   overwrite: false
+2026-04-24T02:03:17.0093000Z   include-hidden-files: false
+2026-04-24T02:03:17.0093240Z   archive: true
+2026-04-24T02:03:17.0093437Z env:
+2026-04-24T02:03:17.0093625Z   DEFAULT_BRANCH: master
+2026-04-24T02:03:17.0093859Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-04-24T02:03:17.0094119Z   GH_AW_ASSETS_BRANCH: 
+2026-04-24T02:03:17.0094332Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-04-24T02:03:17.0094604Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-04-24T02:03:17.0094925Z   GH_AW_WORKFLOW_ID_SANITIZED: buildllmocr
+2026-04-24T02:03:17.0099177Z   GH_AW_MODEL_MULTIPLIERS: {
+  "version": "1",
+  "description": "Effective Tokens (ET) computation data per the gh-aw Effective Tokens Specification v0.2.0. Token class weights are applied first to normalize across token classes, then the per-model multiplier scales the result relative to the reference model.",
+  "reference_model": "claude-sonnet-4.5",
+  "token_class_weights": {
+    "input": 1.0,
+    "cached_input": 0.1,
+    "output": 4.0,
+    "reasoning": 4.0,
+    "cache_write": 1.0
+  },
+  "multipliers": {
+    "claude-haiku-4.5": 0.1,
+    "claude-3-5-haiku": 0.1,
+    "claude-3-haiku": 0.1,
+    "claude-sonnet-4.5": 1.0,
+    "claude-sonnet-4.6": 1.0,
+    "claude-3-5-sonnet": 1.0,
+    "claude-3-7-sonnet": 1.0,
+    "claude-3-sonnet": 1.0,
+    "claude-opus-4.5": 5.0,
+    "claude-opus-4.6": 5.0,
+    "claude-3-5-opus": 5.0,
+    "claude-3-opus": 5.0,
+    "gpt-4o": 1.0,
+    "gpt-4o-mini": 0.1,
+    "gpt-4.1": 1.0,
+    "gpt-4.1-2025-04-14": 1.0,
+    "gpt-41-copilot": 1.0,
+    "gpt-4.1-mini": 0.1,
+    "gpt-4.1-nano": 0.05,
+    "gpt-4-turbo": 1.0,
+    "gpt-4": 1.0,
+    "gpt-5": 1.0,
+    "gpt-5-mini": 0,
+    "gpt-5.1": 1.0,
+    "gpt-5.1-codex": 1.0,
+    "gpt-5.1-codex-mini": 0.33,
+    "gpt-5.1-codex-max": 1.0,
+    "gpt-5.2": 1.0,
+    "gpt-5.2-codex": 1.0,
+    "gpt-5.3-codex": 1.0,
+    "gpt-5.4": 1.0,
+    "gpt-5.4-mini": 0.33,
+    "o1": 3.0,
+    "o1-mini": 0.5,
+    "o1-pro": 10.0,
+    "o3": 3.0,
+    "o3-mini": 0.5,
+    "o4-mini": 0.5,
+    "gemini-2.5-pro": 1.0,
+    "gemini-2.5-flash": 0.2,
+    "gemini-2.0-flash": 0.1,
+    "gemini-1.5-pro": 1.0,
+    "gemini-1.5-flash": 0.1
+  }
+}
+2026-04-24T02:03:17.0103582Z   GITHUB_AW_OTEL_TRACE_ID: c026c7155c91cf4ca046ed572da2352b
+2026-04-24T02:03:17.0103937Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: a1067ba8268b68d4
+2026-04-24T02:03:17.0104251Z   GITHUB_AW_OTEL_JOB_START_MS: 1776996151660
+2026-04-24T02:03:17.0104515Z ##[endgroup]
+2026-04-24T02:03:17.1692047Z With the provided path, there will be 22 files uploaded
+2026-04-24T02:03:17.1697355Z Artifact name is valid!
+2026-04-24T02:03:17.1697883Z Root directory input is valid!
+2026-04-24T02:03:17.2480858Z Uploading artifact: agent.zip
+2026-04-24T02:03:17.2517226Z Beginning upload of artifact content to blob storage
+2026-04-24T02:03:17.3905335Z Uploaded bytes 64429
+2026-04-24T02:03:17.4047308Z Finished uploading artifact content to blob storage!
+2026-04-24T02:03:17.4048206Z SHA256 digest of uploaded artifact is a58bb12a35a8fa30e514b2edd361bfe90bfd04d7666b66141a48e944985f0862
+2026-04-24T02:03:17.4048993Z Finalizing artifact upload
+2026-04-24T02:03:17.5286773Z Artifact agent successfully finalized. Artifact ID 6615872948
+2026-04-24T02:03:17.5287671Z Artifact agent has been successfully uploaded! Final size is 64429 bytes. Artifact ID is 6615872948
+2026-04-24T02:03:17.5291338Z Artifact download URL: https://github.com/handrisantoso/ai-demo/actions/runs/24868424169/artifacts/6615872948

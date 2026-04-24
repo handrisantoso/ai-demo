@@ -1,0 +1,8 @@
+2026-04-24T02:02:25.2360000Z Requested labels: ubuntu-latest
+2026-04-24T02:02:25.2360000Z Job defined at: handrisantoso/ai-demo/.github/workflows/build-llm-ocr.lock.yml@refs/heads/master
+2026-04-24T02:02:25.2360000Z Waiting for a runner to pick up this job...
+2026-04-24T02:02:25.2390000Z Job is about to start running on the hosted runner: GitHub Actions 1000000007
+2026-04-24T02:02:25.2390000Z Job is waiting for a hosted runner to come online.
+2026-04-24T02:02:25.2360000Z Evaluating agent.if
+2026-04-24T02:02:25.2360000Z Evaluating: success()
+2026-04-24T02:02:25.2360000Z Result: true

@@ -1,0 +1,88 @@
+﻿2026-04-24T02:02:47.4381405Z ##[group]Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+2026-04-24T02:02:47.4381802Z with:
+2026-04-24T02:02:47.4381986Z   name: activation
+2026-04-24T02:02:47.4382177Z   path: /tmp/gh-aw
+2026-04-24T02:02:47.4382376Z   merge-multiple: false
+2026-04-24T02:02:47.4382607Z   repository: handrisantoso/ai-demo
+2026-04-24T02:02:47.4382853Z   run-id: 24868424169
+2026-04-24T02:02:47.4383049Z   skip-decompress: false
+2026-04-24T02:02:47.4383268Z   digest-mismatch: error
+2026-04-24T02:02:47.4383468Z env:
+2026-04-24T02:02:47.4383641Z   DEFAULT_BRANCH: master
+2026-04-24T02:02:47.4383848Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-04-24T02:02:47.4384071Z   GH_AW_ASSETS_BRANCH: 
+2026-04-24T02:02:47.4384285Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-04-24T02:02:47.4384541Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-04-24T02:02:47.4384853Z   GH_AW_WORKFLOW_ID_SANITIZED: buildllmocr
+2026-04-24T02:02:47.4389272Z   GH_AW_MODEL_MULTIPLIERS: {
+  "version": "1",
+  "description": "Effective Tokens (ET) computation data per the gh-aw Effective Tokens Specification v0.2.0. Token class weights are applied first to normalize across token classes, then the per-model multiplier scales the result relative to the reference model.",
+  "reference_model": "claude-sonnet-4.5",
+  "token_class_weights": {
+    "input": 1.0,
+    "cached_input": 0.1,
+    "output": 4.0,
+    "reasoning": 4.0,
+    "cache_write": 1.0
+  },
+  "multipliers": {
+    "claude-haiku-4.5": 0.1,
+    "claude-3-5-haiku": 0.1,
+    "claude-3-haiku": 0.1,
+    "claude-sonnet-4.5": 1.0,
+    "claude-sonnet-4.6": 1.0,
+    "claude-3-5-sonnet": 1.0,
+    "claude-3-7-sonnet": 1.0,
+    "claude-3-sonnet": 1.0,
+    "claude-opus-4.5": 5.0,
+    "claude-opus-4.6": 5.0,
+    "claude-3-5-opus": 5.0,
+    "claude-3-opus": 5.0,
+    "gpt-4o": 1.0,
+    "gpt-4o-mini": 0.1,
+    "gpt-4.1": 1.0,
+    "gpt-4.1-2025-04-14": 1.0,
+    "gpt-41-copilot": 1.0,
+    "gpt-4.1-mini": 0.1,
+    "gpt-4.1-nano": 0.05,
+    "gpt-4-turbo": 1.0,
+    "gpt-4": 1.0,
+    "gpt-5": 1.0,
+    "gpt-5-mini": 0,
+    "gpt-5.1": 1.0,
+    "gpt-5.1-codex": 1.0,
+    "gpt-5.1-codex-mini": 0.33,
+    "gpt-5.1-codex-max": 1.0,
+    "gpt-5.2": 1.0,
+    "gpt-5.2-codex": 1.0,
+    "gpt-5.3-codex": 1.0,
+    "gpt-5.4": 1.0,
+    "gpt-5.4-mini": 0.33,
+    "o1": 3.0,
+    "o1-mini": 0.5,
+    "o1-pro": 10.0,
+    "o3": 3.0,
+    "o3-mini": 0.5,
+    "o4-mini": 0.5,
+    "gemini-2.5-pro": 1.0,
+    "gemini-2.5-flash": 0.2,
+    "gemini-2.0-flash": 0.1,
+    "gemini-1.5-pro": 1.0,
+    "gemini-1.5-flash": 0.1
+  }
+}
+2026-04-24T02:02:47.4393478Z   GITHUB_AW_OTEL_TRACE_ID: c026c7155c91cf4ca046ed572da2352b
+2026-04-24T02:02:47.4393823Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: a1067ba8268b68d4
+2026-04-24T02:02:47.4394120Z   GITHUB_AW_OTEL_JOB_START_MS: 1776996151660
+2026-04-24T02:02:47.4394380Z ##[endgroup]
+2026-04-24T02:02:47.5749360Z Downloading single artifact
+2026-04-24T02:02:47.6418829Z Preparing to download the following artifacts:
+2026-04-24T02:02:47.6419895Z - activation (ID: 6615863637, Size: 3789, Expected Digest: sha256:77b0ad0a8021e34178904cbae58e55f68b0c0c38650b449c3fdd16dd6916f043)
+2026-04-24T02:02:47.7274047Z Redirecting to blob download url: https://productionresultssa8.blob.core.windows.net/actions-results/52e00878-0ed0-407c-b470-7bcb035d34d3/workflow-job-run-02379e18-4589-5bf0-b21d-ccb159964e84/artifacts/b15526c9c0e75acea3d1f8055de216c85f0330baf8604e13d8c6ce90fb90d6d7.zip
+2026-04-24T02:02:47.7275910Z Starting download of artifact to: /tmp/gh-aw
+2026-04-24T02:02:47.7677333Z (node:3897) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-04-24T02:02:47.7678313Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-04-24T02:02:47.7728190Z SHA256 digest of downloaded artifact is 77b0ad0a8021e34178904cbae58e55f68b0c0c38650b449c3fdd16dd6916f043
+2026-04-24T02:02:47.7729052Z Artifact download completed successfully.
+2026-04-24T02:02:47.7730236Z Total of 1 artifact(s) downloaded
+2026-04-24T02:02:47.7733878Z Download artifact has finished successfully

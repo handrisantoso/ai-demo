@@ -1,0 +1,153 @@
+[INFO] Auto-detected DNS servers from /run/systemd/resolve/resolv.conf: 168.63.129.16
+[WARN] ⚠️  Using --env-all: All host environment variables will be passed to container
+[WARN]    This may expose sensitive credentials if logs or configs are shared
+[WARN] ⚠️  Host access enabled with host.docker.internal in allowed domains
+[WARN]    Containers can access ANY service running on the host machine
+[WARN]    Only use this for trusted workloads (e.g., MCP gateways)
+[INFO] API proxy enabled: OpenAI=false, Anthropic=false, Copilot=true, Gemini=false
+[INFO] Allowed domains: api.business.githubcopilot.com, api.enterprise.githubcopilot.com, api.github.com, api.githubcopilot.com, api.individual.githubcopilot.com, api.snapcraft.io, archive.ubuntu.com, azure.archive.ubuntu.com, crl.geotrust.com, crl.globalsign.com, crl.identrust.com, crl.sectigo.com, crl.thawte.com, crl.usertrust.com, crl.verisign.com, crl3.digicert.com, crl4.digicert.com, crls.ssl.com, github.com, host.docker.internal, json-schema.org, json.schemastore.org, keyserver.ubuntu.com, ocsp.digicert.com, ocsp.geotrust.com, ocsp.globalsign.com, ocsp.identrust.com, ocsp.sectigo.com, ocsp.ssl.com, ocsp.thawte.com, ocsp.usertrust.com, ocsp.verisign.com, packagecloud.io, packages.cloud.google.com, packages.microsoft.com, ppa.launchpad.net, raw.githubusercontent.com, registry.npmjs.org, s.symcb.com, s.symcd.com, security.ubuntu.com, telemetry.enterprise.githubcopilot.com, ts-crl.ws.symantec.com, ts-ocsp.ws.symantec.com, www.googleapis.com
+[INFO] Setting up host-level firewall network and iptables rules...
+[SUCCESS] Created network 'awf-net' with bridge 'fw-bridge'
+[INFO] Setting up host-level iptables rules...
+[INFO] Host access enabled: allowing traffic to gateway IPs 172.30.0.1, 172.17.0.1 on ports 80, 443
+[SUCCESS] Host-level iptables rules configured successfully
+[INFO] Generating configuration files...
+[WARN] --enable-api-proxy is active but GEMINI_API_KEY is not set.
+[WARN]    The api-proxy Gemini listener (port 10003) will return 503 responses until GEMINI_API_KEY is provided.
+[WARN]    This is expected when Gemini is not being used.
+[INFO] API proxy sidecar enabled - API keys will be held securely in sidecar container
+[INFO] API proxy will route through Squid to respect domain whitelisting
+[INFO] Starting containers...
+ Container awf-squid  Creating
+ Container awf-api-proxy  Creating
+ Container awf-api-proxy  Created
+ Container awf-squid  Created
+ Container awf-agent  Creating
+ Container awf-agent  Created
+ Container awf-iptables-init  Creating
+ Container awf-iptables-init  Created
+ Container awf-squid  Starting
+ Container awf-api-proxy  Starting
+ Container awf-api-proxy  Started
+ Container awf-squid  Started
+ Container awf-squid  Waiting
+ Container awf-api-proxy  Waiting
+ Container awf-api-proxy  Healthy
+ Container awf-squid  Healthy
+ Container awf-agent  Starting
+ Container awf-agent  Started
+ Container awf-agent  Waiting
+ Container awf-agent  Healthy
+ Container awf-iptables-init  Starting
+ Container awf-iptables-init  Started
+[SUCCESS] Containers started successfully
+[INFO] Executing agent command...
+[entrypoint] Agentic Workflow Firewall - Agent Container
+[entrypoint] ==================================
+[entrypoint] Adjusting awfuser UID:GID from 1000:1000 to 1001:1001
+[entrypoint] UID/GID adjustment complete
+[entrypoint] Configuring DNS...
+[entrypoint] DNS configured with Docker embedded DNS (127.0.0.11) only
+[entrypoint] Waiting for iptables initialization from init container...
+[entrypoint] iptables initialization complete
+[health-check] API Proxy Pre-flight Check
+[health-check] ==========================================
+[health-check] Checking GitHub Copilot API proxy configuration...
+[health-check] COPILOT_API_URL=http://172.30.0.30:10002
+[health-check] ✓ COPILOT_GITHUB_TOKEN is placeholder value (correct)
+[health-check] ✓ COPILOT_TOKEN is placeholder value (correct)
+[health-check] Testing connectivity to GitHub Copilot API proxy at http://172.30.0.30:10002...
+[health-check] ✓ GitHub Copilot API proxy is reachable at http://172.30.0.30:10002
+[health-check] ==========================================
+[health-check] ✓ All API proxy health checks passed
+[health-check] ✓ Credential isolation verified
+[health-check] ✓ Connectivity established
+[health-check] ==========================================
+[entrypoint] Pre-seeding JVM build tool proxy configuration (squid-proxy:3128)...
+[entrypoint] ✓ Created Maven proxy config (/host/home/runner/.m2/settings.xml)
+[entrypoint] ✓ Created Gradle proxy config (/host/home/runner/.gradle/gradle.properties)
+[entrypoint] ✓ Set JAVA_TOOL_OPTIONS with proxy and nonProxyHosts flags
+[entrypoint] Proxy configuration:
+[entrypoint]   HTTP_PROXY=http://172.30.0.10:3128
+[entrypoint]   HTTPS_PROXY=http://172.30.0.10:3128
+[entrypoint] Network information:
+[entrypoint]   IP address: 172.30.0.20 
+[entrypoint]   Hostname: 76f5db22bd83
+[entrypoint] ==================================
+[entrypoint] Chroot mode enabled - dropping CAP_SYS_CHROOT and CAP_SYS_ADMIN
+[entrypoint] Switching to awfuser (UID: 1001, GID: 1001)
+[entrypoint] Executing command: /bin/bash -c /bin/bash -c 'node ${RUNNER_TEMP}/gh-aw/actions/copilot_driver.cjs /usr/local/bin/copilot --add-dir /tmp/gh-aw/ --log-level all --log-dir /tmp/gh-aw/sandbox/agent/logs/ --disable-builtin-mcps --no-ask-user --allow-all-tools --allow-all-paths --add-dir "${GITHUB_WORKSPACE}" --prompt "$(cat /tmp/gh-aw/aw-prompts/prompt.txt)"'
+
+[entrypoint] Chroot mode: running command inside host filesystem (/host)
+[entrypoint] Mounted procfs at /host/proc (nosuid,nodev,noexec)
+[entrypoint] One-shot token library copied to chroot at /tmp/awf-lib/one-shot-token.so
+[entrypoint] DNS configuration created in chroot (/host/etc/resolv.conf)
+[entrypoint] Chroot working directory: /home/runner/work/ai-demo/ai-demo
+[entrypoint] Running as host user: runner (UID: 1001)
+[entrypoint] Using host PATH for chroot
+[entrypoint] Adding JAVA_HOME/bin to PATH: /usr/lib/jvm/temurin-17-jdk-amd64/bin
+[entrypoint] DNS configuration will be removed on exit
+[entrypoint] Transferred /host/tmp/gh-aw ownership to chroot user (1001:1001)
+[entrypoint][WARN] Failed to transfer /host/home/runner/work/_temp/gh-aw/safeoutputs ownership to chroot user
+[entrypoint] Ensured ~/.gemini ownership for chroot user (1001:1001)
+[copilot-driver] 2026-04-24T02:03:04.805Z starting: command=/usr/local/bin/copilot maxRetries=3 initialDelayMs=5000 backoffMultiplier=2 maxDelayMs=60000 nodeVersion=v20.20.2 platform=linux
+[copilot-driver] 2026-04-24T02:03:04.898Z pre-flight: command is accessible and executable: /usr/local/bin/copilot
+[copilot-driver] 2026-04-24T02:03:04.898Z attempt 1: spawning: /usr/local/bin/copilot --add-dir /tmp/gh-aw/ --log-level all --log-dir /tmp/gh-aw/sandbox/agent/logs/ --disable-builtin-mcps --no-ask-user --allow-all-tools --allow-all-paths --add-dir /home/runner/work/ai-demo/ai-demo --prompt <redacted>
+[copilot-driver] 2026-04-24T02:03:04.902Z attempt 1: process started (pid=161)
+[entrypoint] Unsetting sensitive tokens from parent shell environment...
+[entrypoint] Unset COPILOT_GITHUB_TOKEN from /proc/1/environ
+Error: Authentication failed (Request ID: EC11:27C56C:E8899C:10E63F4:69EACF5B)
+
+Your GitHub token may be invalid, expired, or lacking the required permissions.
+
+To resolve this, try the following:
+  • Start 'copilot' and run the '/login' command to re-authenticate
+  • If using a Fine-Grained PAT, ensure it has the 'Copilot Requests' permission enabled
+  • If using COPILOT_GITHUB_TOKEN, GH_TOKEN or GITHUB_TOKEN environment variable, verify the token is valid and not expired
+  • Run 'gh auth status' to check your current authentication status
+[copilot-driver] 2026-04-24T02:03:07.182Z attempt 1: process exit event exitCode=1
+[copilot-driver] 2026-04-24T02:03:07.183Z attempt 1: process closed exitCode=1 duration=2s stdout=0B stderr=555B hasOutput=true
+[copilot-driver] 2026-04-24T02:03:07.183Z attempt 1 failed: exitCode=1 isCAPIError400=false isMCPPolicyError=false isModelNotSupportedError=false isAuthError=false hasOutput=true retriesRemaining=3
+[copilot-driver] 2026-04-24T02:03:07.183Z attempt 1: partial execution — will retry with --continue (attempt 2/4)
+[copilot-driver] 2026-04-24T02:03:07.183Z retry 1/3: sleeping 5000ms before next attempt with --continue
+[copilot-driver] 2026-04-24T02:03:12.189Z retry 1/3: woke up, next delay cap will be 20000ms
+[copilot-driver] 2026-04-24T02:03:12.189Z attempt 2: spawning: /usr/local/bin/copilot --add-dir /tmp/gh-aw/ --log-level all --log-dir /tmp/gh-aw/sandbox/agent/logs/ --disable-builtin-mcps --no-ask-user --allow-all-tools --allow-all-paths --add-dir /home/runner/work/ai-demo/ai-demo --prompt <redacted> --continue
+[copilot-driver] 2026-04-24T02:03:12.191Z attempt 2: process started (pid=248)
+Error: No authentication information found.
+
+Copilot can be authenticated with GitHub using an OAuth Token or a Fine-Grained Personal Access Token.
+
+To authenticate, you can use any of the following methods:
+  • Start 'copilot' and run the '/login' command
+  • Set the COPILOT_GITHUB_TOKEN, GH_TOKEN, or GITHUB_TOKEN environment variable
+  • Run 'gh auth login' to authenticate with the GitHub CLI
+[copilot-driver] 2026-04-24T02:03:13.188Z attempt 2: process exit event exitCode=1
+[copilot-driver] 2026-04-24T02:03:13.188Z attempt 2: process closed exitCode=1 duration=0s stdout=0B stderr=404B hasOutput=true
+[copilot-driver] 2026-04-24T02:03:13.188Z attempt 2 failed: exitCode=1 isCAPIError400=false isMCPPolicyError=false isModelNotSupportedError=false isAuthError=true hasOutput=true retriesRemaining=2
+[copilot-driver] 2026-04-24T02:03:13.188Z attempt 2: no authentication information found — not retrying (COPILOT_GITHUB_TOKEN, GH_TOKEN, and GITHUB_TOKEN are all absent or invalid)
+[copilot-driver] 2026-04-24T02:03:13.188Z done: exitCode=1 totalDuration=8s
+[INFO] Stopping containers...
+ Container awf-iptables-init  Stopping
+ Container awf-iptables-init  Stopped
+ Container awf-iptables-init  Removing
+ Container awf-iptables-init  Removed
+ Container awf-agent  Stopping
+ Container awf-agent  Stopped
+ Container awf-agent  Removing
+ Container awf-agent  Removed
+ Container awf-squid  Stopping
+ Container awf-api-proxy  Stopping
+ Container awf-api-proxy  Stopped
+ Container awf-api-proxy  Removing
+ Container awf-api-proxy  Removed
+ Container awf-squid  Stopped
+ Container awf-squid  Removing
+ Container awf-squid  Removed
+[SUCCESS] Containers stopped successfully
+[INFO] Agent session state preserved at: /tmp/awf-agent-session-state-1776996167892
+[INFO] API proxy logs available at: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs
+[INFO] CLI proxy logs available at: /tmp/gh-aw/sandbox/firewall/logs/cli-proxy-logs
+[INFO] Squid logs available at: /tmp/gh-aw/sandbox/firewall/logs
+[INFO] Audit artifacts available at: /tmp/gh-aw/sandbox/firewall/audit
+[WARN] Command completed with exit code: 1
+Process exiting with code: 1
